@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refresher_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+
+        <RelativeLayout
+            android:id="@+id/error_msg_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/error_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/no_data_available_swipe_to_refresh" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/page_headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="Craiova - RO"
+                android:textColor="@color/dark_text_on_light_background_primary_text_color"
+                android:textSize="@dimen/headline" />
+
+            <TextView
+                android:id="@+id/subheading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/page_headline"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginTop="8dp"
+                android:text="Mon, 12:30 PM, Mostly sunny"
+                android:textColor="@color/dark_text_on_light_background_secondary_text_color"
+                android:textSize="@dimen/subheading" />
+
+            <RelativeLayout
+                android:id="@+id/current_weather_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subheading"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:id="@+id/temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_marginStart="16dp"
+                    android:text="23"
+                    android:textColor="@color/dark_text_on_light_background_primary_text_color"
+                    android:textSize="@dimen/display4" />
+
+                <TextView
+                    android:id="@+id/unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/temperature"
+                    android:text="°C"
+                    android:textColor="@color/dark_text_on_light_background_primary_text_color"
+                    android:textSize="@dimen/display2" />
+
+                <ImageView
+                    android:id="@+id/weather_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/r01d" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/wind_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/current_weather_container"
+                android:layout_marginTop="24dp">
+
+                <ImageView
+                    android:id="@+id/wind_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:src="@drawable/ic_weather_windy_black_24dp" />
+
+                <TextView
+                    android:id="@+id/wind_speed_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_toRightOf="@id/wind_icon"
+                    android:text="23"
+                    android:textColor="@color/dark_text_on_light_background_secondary_text_color"
+                    android:textSize="@dimen/title" />
+
+                <TextView
+                    android:id="@+id/wind_speed_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/wind_speed_value"
+                    android:text="m/h"
+                    android:textColor="@color/dark_text_on_light_background_secondary_text_color"
+                    android:textSize="@dimen/title" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wind_container"
+                android:layout_marginTop="24dp">
+
+                <ImageView
+                    android:id="@+id/water_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:src="@drawable/ic_water_black_24dp" />
+
+                <TextView
+                    android:id="@+id/precipitation_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_toRightOf="@id/water_icon"
+                    android:text="23"
+                    android:textColor="@color/dark_text_on_light_background_secondary_text_color"
+                    android:textSize="@dimen/title" />
+
+                <TextView
+                    android:id="@+id/precipitation_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/precipitation_value"
+                    android:text="%"
+                    android:textColor="@color/dark_text_on_light_background_secondary_text_color"
+                    android:textSize="@dimen/title" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1976d2</color>
+    <color name="colorPrimaryDark">#004ba0</color>
+    <color name="colorAccent">#63a4ff</color>
+    <color name="action_bar_text_color">#ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="android_default_background_color">#FAFAFA</color>
+    <color name="black">#000000</color>
+    <color name="line_divider">#aaa9a9</color>
+    <color name="custom_dot_color">#aaa9a9</color>
+    <color name="custom_line_divider">#aaa9a9</color>
+
+    <color name="not_selected_text_tab_layout">#ecefef</color>
+    <color name="selected_text_color_tab_layout">#ffffff</color>
+    <color name="tab_indicator_color">#ffffff</color>
+
+    <!-- Button -->
+    <color name="flat_button_color_disabled">#4263a4ff</color>
+    <color name="flat_button_color_enabled">#63a4ff</color>
+
+    <!--Material design color for text 2017-->
+    <!-- Dark Text on light background-->
+    <color name="dark_text_on_light_background_primary_text_color">#DE000000</color>
+    <color name="dark_text_on_light_background_secondary_text_color">#8A000000</color>
+    <color name="dark_text_on_light_background_disabled_hint_text_color">#61000000</color>
+    <color name="dark_text_on_light_background_dividers">#1F000000</color>
+
+    <!--White text on dark background-->
+    <color name="white_text_on_dark_background_primary_text_color">#FFFFFFFF</color>
+    <color name="white_text_on_dark_background_secondary_text_color">#B3FFFFFF</color>
+    <color name="white_text_on_dark_background_disabled_hint_text_color">#80000000</color>
+    <color name="white_text_on_dark_background_dividers">#1F000000</color>
+
+
+</resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/medium_margin"
+    android:layout_marginLeft="@dimen/medium_margin"
+    android:layout_marginRight="@dimen/medium_margin"
+    android:layout_marginTop="@dimen/medium_margin"
+    android:background="?attr/selectableItemBackground"
+    app:cardCornerRadius="@dimen/card_corner_radius">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/medium_margin"
+                >
+
+                <TextView
+                    android:paddingLeft="@dimen/flat_button_horizontal_padding"
+                    android:id="@+id/city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/medium_margin"
+                    android:text="Craiova"
+                    android:textColor="@color/dark_text_on_light_background_primary_text_color"
+                    android:textSize="@dimen/subheading" />
+
+                <TextView
+                    android:paddingLeft="@dimen/flat_button_horizontal_padding"
+                    android:id="@+id/country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Romania"
+                    android:textColor="@color/dark_text_on_light_background_secondary_text_color"
+                    android:textSize="@dimen/body1"
+                    android:layout_below="@+id/city"
+                    />
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:layout_marginRight="@dimen/medium_margin"
+                android:id="@+id/icon"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/r01d" />
+
+
+            <TextView
+                android:layout_toLeftOf="@id/icon"
+                android:id="@+id/temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/margin"
+                android:text="20°C"
+                android:textColor="@color/dark_text_on_light_background_primary_text_color"
+                android:textSize="@dimen/title" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dark_text_on_light_background_dividers" />
+
+        <TextView
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/flat_button_height"
+            android:layout_gravity="left"
+            android:layout_marginBottom="@dimen/flat_button_horizontal_padding"
+            android:layout_marginLeft="@dimen/flat_button_horizontal_margin"
+            android:layout_marginRight="@dimen/flat_button_horizontal_margin"
+            android:layout_marginTop="@dimen/flat_button_horizontal_padding"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/flat_button_horizontal_padding"
+            android:paddingRight="@dimen/flat_button_horizontal_padding"
+            android:text="@string/delete"
+            android:textAllCaps="true"
+            android:textColor="@color/flat_button_color_enabled"
+            android:textSize="@dimen/flat_button_text_size" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

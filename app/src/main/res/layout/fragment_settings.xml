@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin"
+                    android:text="Mode"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/large_size_text" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingRight="@dimen/margin">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin"
+                        android:layout_marginTop="@dimen/margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:text="Metric"
+                            android:textColor="@color/dark_text_on_light_background_primary_text_color"
+                            android:textSize="@dimen/title" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:text="C, km/h, mmHg"
+                            android:textColor="@color/dark_text_on_light_background_secondary_text_color"
+                            android:textSize="@dimen/title" />
+                    </LinearLayout>
+
+                    <RadioButton
+                        android:id="@+id/units_mode_metric"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingRight="@dimen/margin">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin"
+                        android:layout_marginTop="@dimen/margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:text="Imperial"
+                            android:textColor="@color/dark_text_on_light_background_primary_text_color"
+                            android:textSize="@dimen/title" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:text="F, mph, mmHg"
+                            android:textColor="@color/dark_text_on_light_background_secondary_text_color"
+                            android:textSize="@dimen/title" />
+                    </LinearLayout>
+
+                    <RadioButton
+                        android:id="@+id/units_mode_imperial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingRight="@dimen/margin">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin"
+                        android:layout_marginTop="@dimen/margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:text="@string/custom"
+                            android:textColor="@color/dark_text_on_light_background_primary_text_color"
+                            android:textSize="@dimen/title" />
+                    </LinearLayout>
+
+                    <RadioButton
+                        android:id="@+id/units_mode_custom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/temperature_holder"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:visibility="gone"
+            app:cardCornerRadius="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin"
+                    android:text="Temperature"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/large_size_text" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingRight="@dimen/margin">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin"
+                        android:layout_marginTop="@dimen/margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:text="Metric"
+                            android:textColor="@color/dark_text_on_light_background_primary_text_color"
+                            android:textSize="@dimen/title" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:text="C"
+                            android:textColor="@color/dark_text_on_light_background_secondary_text_color"
+                            android:textSize="@dimen/title" />
+                    </LinearLayout>
+
+                    <RadioButton
+                        android:id="@+id/temp_metric_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingRight="@dimen/margin">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin"
+                        android:layout_marginTop="@dimen/margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:text="Imperial"
+                            android:textColor="@color/dark_text_on_light_background_primary_text_color"
+                            android:textSize="@dimen/title" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:text="F"
+                            android:textColor="@color/dark_text_on_light_background_secondary_text_color"
+                            android:textSize="@dimen/title" />
+                    </LinearLayout>
+
+                    <RadioButton
+
+                        android:id="@+id/temp_imperial_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/wind_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:visibility="gone"
+            app:cardCornerRadius="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin"
+                    android:text="@string/wind"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/large_size_text" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingRight="@dimen/margin">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin"
+                        android:layout_marginTop="@dimen/margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:text="mph"
+                            android:textColor="@color/dark_text_on_light_background_primary_text_color"
+                            android:textSize="@dimen/title" />
+
+                    </LinearLayout>
+
+                    <RadioButton
+                        android:id="@+id/wind_miles_h_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingRight="@dimen/margin">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin"
+                        android:layout_marginTop="@dimen/margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:text="km/h"
+                            android:textColor="@color/dark_text_on_light_background_primary_text_color"
+                            android:textSize="@dimen/title" />
+
+                    </LinearLayout>
+
+                    <RadioButton
+                        android:id="@+id/wind_km_h_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingRight="@dimen/margin">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin"
+                        android:layout_marginTop="@dimen/margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:text="m/s"
+                            android:textColor="@color/dark_text_on_light_background_primary_text_color"
+                            android:textSize="@dimen/title" />
+
+                    </LinearLayout>
+
+                    <RadioButton
+                        android:id="@+id/wind_m_s_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/pressure_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:visibility="gone"
+            app:cardCornerRadius="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_marginTop="@dimen/margin"
+                    android:text="@string/pressure"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/large_size_text" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingRight="@dimen/margin">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin"
+                        android:layout_marginTop="@dimen/margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:text="mmHg"
+                            android:textColor="@color/dark_text_on_light_background_primary_text_color"
+                            android:textSize="@dimen/title" />
+
+                    </LinearLayout>
+
+                    <RadioButton
+                        android:id="@+id/pressure_mmhg_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingRight="@dimen/margin">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin"
+                        android:layout_marginTop="@dimen/margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin"
+                            android:text="hPa"
+                            android:textColor="@color/dark_text_on_light_background_primary_text_color"
+                            android:textSize="@dimen/title" />
+
+                    </LinearLayout>
+
+                    <RadioButton
+                        android:id="@+id/pressure_hpa_radio_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

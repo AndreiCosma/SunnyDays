@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:configure="ro.cosma.andrei.sunnydays.widget.CurrentWeatherWidgetConfigureActivity"
+    android:initialKeyguardLayout="@layout/current_weather_widget"
+    android:initialLayout="@layout/current_weather_widget"
+    android:minHeight="@dimen/widget_min_height"
+    android:minWidth="@dimen/widget_min_width"
+    android:previewImage="@drawable/r10d"
+    android:updatePeriodMillis="1800000"
+    android:widgetCategory="home_screen" />
